@@ -248,7 +248,7 @@
         </div>
       `;
       // attach handlers
-      document.getElementById('tutorial-open-marketplace').addEventListener('click', ()=> { window.location.href = 'Marketplace/index.html'; });
+      document.getElementById('tutorial-open-marketplace').addEventListener('click', ()=> { window.location.href = 'wozmarketplace.netlify.app'; });
       document.getElementById('tutorial-restart-btn').addEventListener('click', ()=> { startTour(0); });
       document.getElementById('tutorial-cancel-btn').addEventListener('click', ()=> { endTour(); });
 
@@ -482,4 +482,5 @@
   });
 
   window.WozTutorial = { start: startTour, end: endTour, state: ()=> state };
+
 })();
