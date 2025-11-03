@@ -242,7 +242,6 @@
         <h4 id="tutorial-title">${s.title}</h4>
         <p id="tutorial-text" style="white-space:pre-wrap;">${s.text}</p>
         <div style="display:flex;gap:8px;margin-top:10px;">
-          <button id="tutorial-open-marketplace" class="btn-primary">Woz Marketplace</button>
           <button id="tutorial-restart-btn" class="btn-secondary">Reiniciar tutorial</button>
           <button id="tutorial-cancel-btn" class="btn-ghost">Cancelar</button>
         </div>
@@ -484,6 +483,7 @@
   window.WozTutorial = { start: startTour, end: endTour, state: ()=> state };
 
 })();
+
 
 
 
