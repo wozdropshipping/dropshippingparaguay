@@ -5,31 +5,31 @@
     /* Raíz (index.html) */
     { page: "index.html", selector: "#globalDroppers", title:"Droppers (cantidad)", text:"Aquí ves el conteo de droppers que siguen productos. Es útil para medir demanda." },
     { page: "index.html", selector: ".dropper-region", title:"Droppers por país", text:"Distribución por país: te ayuda a seleccionar mercados con alta demanda." },
-    { page: "index.html", selector:"#productList", title:"Productos Woz Dropshipping", text:"Listado de productos que puedes vender. Haz clic en una tarjeta para ver detalles." },
-    { page: "index.html", selector:".product-card", title:"Card del producto", text:"Tarjeta del producto con información rápida." },
+    { page: "index.html", selector:"#productList", title:"Productos a revender", text:"Listado de productos que puedes revender en automatico. Productos exportados, solo debes escoger cual vender." },
+    { page: "index.html", selector:".product-card", title:"Producto general", text:"Tarjeta del producto con información rápida." },
     { page: "index.html", selector:".product-card .title", title:"Título", text:"Nombre del producto exportado." },
-    { page: "index.html", selector:".product-card .provider-name", title:"Proveedor", text:"Proveedor de origen (información útil para importación)." },
+    { page: "index.html", selector:".product-card .provider-name", title:"Proveedor exportado", text:"Es quien enviará el producto a su destino en cualquier parte del mundo. Solo debes vender en automatico." },
     { page: "index.html", selector:".price-provider", title:"Precio proveedor", text:"Precio base del proveedor." },
-    { page: "index.html", selector:".price-suggested", title:"Precio sugerido", text:"Precio recomendado para vender en Marketplace." },
-    { page: "index.html", selector:".rating", title:"Calificación", text:"Calificación promedio del producto." },
-    { page: "index.html", selector:".sold-count", title:"Ventas", text:"Cuántas veces se vendió este producto (indica demanda)." },
-    { page: "index.html", selector:".profitability", title:"Rentabilidad", text:"Indica si la ganancia es alta o regular según márgenes." },
-    { page: "index.html", selector:".vender-btn", title:"Vender este producto", text:"Botón para empezar a vender: abre el formulario modal." },
+    { page: "index.html", selector:".price-suggested", title:"Precio sugerido", text:"Precio recomendado para vender en automatico, es una sugerencia pero tu decides a cuanto vender." },
+    { page: "index.html", selector:".rating", title:"Calificación", text:"Calificación promedio del producto vendido en otras plataformas como AliExpress, Amazon etc.." },
+    { page: "index.html", selector:".sold-count", title:"Ventas del producto en otros mercados", text:"Cuántas veces se vendió este producto en otras plataformas (indica demandan para que puedas vender mejor)." },
+    { page: "index.html", selector:".profitability", title:"Rentabilidad del producto", text:"Indica si la ganancia es alta o regular según márgenes." },
+    { page: "index.html", selector:".vender-btn", title:"Vender en automatico", text:"Botón para empezar a vender: se abrira una ventana para que termines el proceso." },
 
     /* Modal vendedor: primero PREVIEW del modal (usuario debe presionar Siguiente para continuar) */
-    { page: "index.html", selector:"#venderModal, #modal-vender, .modal-vender", title:"Formulario Woz Marketplace", text:"Llena estos campos para publicar en Woz Marketplace. Usa Siguiente para ver cada sección del formulario.", modalPreview: true },
+    { page: "index.html", selector:"#venderModal, #modal-vender, .modal-vender", title:"Formulario para vender en automatico", text:"Llena estos campos para vender en automatico. Usa Siguiente para ver cada sección del formulario.", modalPreview: true },
 
     /* Campos del modal: título + rectángulo (selectores alternativos para tolerancia) */
-    { page: "index.html", selector:"#vendedorNombre, #nombreVendedor, input[name='vendedorNombre'], .vendor-name-input", title:"Título del vendedor", text:"Nombre que verán los compradores." },
+    { page: "index.html", selector:"#vendedorNombre, #nombreVendedor, input[name='vendedorNombre'], .vendor-name-input", title:"Nombre del vendedor", text:"Nombre que verán los compradores." },
     { page: "index.html", selector:"#precioVendedor, #precioProveedor, .price-provider, .precio-proveedor", title:"Precio del vendedor", text:"Tu precio final para el comprador." },
-    { page: "index.html", selector:"#vendorIdInput, #idVendedor, .vendor-id-input", title:"ID de vendedor", text:"ID único que te provee Woz." },
+    { page: "index.html", selector:"#vendorIdInput, #idVendedor, .vendor-id-input", title:"ID de vendedor", text:"ID único que te provee Woz Paraguay al comprar el sistema." },
     { page: "index.html", selector:"#vendedorWhats, #whatsappVendedor, .vendedor-whats", title:"WhatsApp", text:"Contacto para que compradores te contacten." },
     { page: "index.html", selector:"#vendedorDesc, #descripcionVendedor, .vendedor-desc, textarea[name='descripcion']", title:"Descripción del producto", text:"Descripción que aparecerá en la ficha." },
-    { page: "index.html", selector:".banco-box, .bank-info, #datosTransferencia", title:"Datos de transferencia", text:"Datos bancarios para realizar pagos y activación de membresía Woz Dropshipping." },
-    { page: "index.html", selector:"#comprobanteWhats, .comprobante-actions, .publish-actions", title:"Acciones: solicitar ID / comprobante / publicar", text:"Botones para solicitar ID, enviar comprobante y publicar el producto. (Aquí se resaltarán los 3 botones juntos si están en un mismo contenedor.)" },
+    { page: "index.html", selector:".banco-box, .bank-info, #datosTransferencia", title:"Datos de transferencia", text:"Datos bancarios para realizar pagos del sisyema Dropshipping." },
+    { page: "index.html", selector:"#comprobanteWhats, .comprobante-actions, .publish-actions", title:"Mandar tu comprobante para adquirir tu sistema", text:"Botones para solicitar ID, enviar comprobante" },
 
     /* Paso final centrado que termina el tutorial */
-    { page: "index.html", selector: null, title: "Fin de tutorial", text: "Con estos pasos podrás vender de manera ilimitada en nuestras plataformas. Activa un IS de vendedor por tan solo 250.000 Gs anuales y comienza a vender de manera ilimitada.\n\n¿Quieres ver dónde se publicarán tus productos? Visita Woz Marketplace.", final: true }
+    { page: "index.html", selector: null, title: "Fin de tutorial", text: "Con estos pasos podrás vender de manera automatica y con un solo pago de Gs. 250.000 tendras todo el sistema con el inventario cargado. No pagarás dominio, ni hosting, ni mantenimiento mensual, estará en linea 24/7 de manera ilimitada.", final: true }
   ];
 
   let state = { active:false, index:0 };
@@ -484,6 +484,7 @@
   window.WozTutorial = { start: startTour, end: endTour, state: ()=> state };
 
 })();
+
 
 
 
