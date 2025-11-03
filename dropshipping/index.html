@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Woz Dropshipping</title>
+  <title>TÚ MARCA ESTARÁ AQUI</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="css/tutorial.css">
 </head>
@@ -16,7 +16,7 @@
         <span class="dot blue"></span>
       </div>
       <div class="brand-text">
-        <div class="title">Woz Dropshipping</div>
+        <div class="title">TU MARCA</div>
       </div>
     </div>
 
@@ -33,8 +33,10 @@
   <section id="tutorial-banner" class="tutorial-banner">
     <div class="tutorial-banner-inner">
       <h3>Tutorial de cómo vender</h3>
-      <p id="tutorial-intro">¿No sabes cómo vender? Aprende paso a paso con este recorrido interactivo por la plataforma. El tutorial te mostrará las zonas importantes para publicar y vender un producto.</p>
-      <button id="startTutorialBtn" class="tutorial-start">Comenzar tutorial y aprende</button>
+      <p id="tutorial-intro">¿No sabes cómo vender?
+       Guía útil para que aprendas a generar Gs. 6.500.000 mensual vendiendo productos terciarizados.
+      Inversíon por toda la plataforma Gs. 250.000 pago único</p>
+      <button id="startTutorialBtn" class="tutorial-start">Comenzar tutorial</button>
     </div>
   </section>
 
@@ -43,7 +45,7 @@
       <div class="dropper-box">
         <div class="dropper-label">Droppers a nivel general</div>
         <div class="dropper-count" id="globalDroppers"></div>
-        <small id="dropper-note"><strong>DROPPERS MES A MES</strong><br>Estos droppers están viendo estos productos</small>
+        <small id="dropper-note"><strong>DROPPERS MES A MES</strong><br>Estos droppers están viendo y comprando estos productos en automatico</small>
       </div>
 
       <!-- --- Droppers por país --- -->
@@ -134,7 +136,7 @@
     </section>
 
     <!-- NUEVO: Título antes de la lista -->
-    <h2 class="section-title">Productos Woz Dropshipping </h2>
+    <h2 class="section-title">Productos terciarizados para revender en automatico. 30 ventas mensuales aseguradas</h2>
     <section id="productList" class="product-list" aria-live="polite"></section>
 
     <div id="loading" class="loading">Cargando más productos...</div>
@@ -168,7 +170,7 @@
           <span class="droppers-count"></span>
         </div>
       </div>
-      <button class="vender-btn">Vender este producto</button>
+      <button class="vender-btn">Vender en automatico</button>
     </div>
   </template>
   <!-- FIN TEMPLATE -->
@@ -178,33 +180,32 @@
     <div class="modal-content">
       <button class="close-modal" onclick="document.getElementById('venderModal').style.display='none'">×</button>
 
-      <h2 class="modal-title">Vender en Woz Marketplace</h2>
+      <h2 class="modal-title">Vender modo automatico</h2>
 
       <form id="venderForm" class="modal-form" autocomplete="off">
         <!-- Nombre -->
         <div class="form-group first-group">
           <label for="vendedorNombre">Nombre del vendedor</label>
-          <small class="form-subtext">Escribe el nombre de vendedor que estará en Woz Marketplace</small>
+          <small class="form-subtext">Escribe tu nombre completo</small>
           <input id="vendedorNombre" name="vendedorNombre" class="input-woz" type="text" placeholder=" " required>
         </div>
 
         <!-- Precio (con prefijo Gs.) -->
         <div class="form-group price-group">
           <label for="precioVendedor">Precio del vendedor</label>
-          <small class="form-subtext">Es la diferencia entre el precio de proveedor y tu precio final</small>
+          <small class="form-subtext">Di cuanto quieres ganar con esta venta</small>
           <div class="price-input-wrap">
-            <span class="gs-prefix">Gs.</span>
             <input id="precioVendedor" name="precioVendedor" class="input-woz price-input" type="text" inputmode="numeric" placeholder=" ">
           </div>
         </div>
 
         <!-- ID vendedor -->
         <div class="form-group vendor-id-field">
-          <label for="vendorIdInput">ID de vendedor</label>
-          <small class="form-subtext">Carga el ID que te proveemos en WhatsApp; es único.</small>
+          <label for="vendorIdInput">ID para vender en automatico</label>
+          <small class="form-subtext">Te daremos un ID para que vendas en automatico (NO PONGAS TU WHATSAPP).</small>
           <div class="vendor-id-rect">
             <div class="id-label">ID</div>
-            <input id="vendorIdInput" name="vendorId" class="input-woz" type="text" placeholder="619-789-987">
+            <input id="vendorIdInput" name="vendorId" class="input-woz" type="text" placeholder="Te brindaremos un ID por 250.000 Gs al año">
           </div>
         </div>
 
@@ -212,7 +213,7 @@
         <div class="form-group">
           <label for="vendedorWhats">WhatsApp</label>
           <small class="form-subtext">Deja un contacto de WhatsApp para que los compradores te contacten</small>
-          <input id="vendedorWhats" name="vendedorWhats" class="input-woz" type="text" placeholder="Ej: 0977 123 456">
+          <input id="vendedorWhats" name="vendedorWhats" class="input-woz" type="text" placeholder="Ej: 0981 123 456">
         </div>
 
         <!-- Descripción -->
@@ -224,14 +225,15 @@
 
         <!-- Datos bancarios (alineados) -->
         <div class="banco-box" aria-label="Datos de transferencia bancaria">
-          <div class="bank-title">Datos de transferencia bancaria</div>
+          <div class="bank-title">Datos de transferencia bancaria para pagar por el sistema automatizado</div>
           <div class="bank-row"><strong>Alias Bancario:</strong><span class="bank-val">Celular</span></div>
           <div class="bank-row"><strong>Alias:</strong><span class="bank-val">0983994268</span></div>
           <div class="bank-row"><strong>Banco:</strong><span class="bank-val">Banco Sudameris</span></div>
-          <div class="bank-row"><strong>Monto:</strong><span class="bank-val">Gs. 250.000</span></div>
-          <div class="bank-row"><strong>Validez:</strong><span class="bank-val">12 meses</span></div>
+          <div class="bank-row"><strong>Monto:</strong><span class="bank-val">Gs. 250.000 (UN SOLO PAGO)</span></div>
+          <div class="bank-row"><strong>Ganancias mes</strong><span class="bank-val">Gs. 6.500.000 (En automatico)</span></div>
+          <div class="bank-row"><strong>Validez:</strong><span class="bank-val">Ilimitado</span></div>
         </div>
-        <div class="bank-note">Válido 12 meses para vender</div>
+        <div class="bank-note">Productos exportados de AliExpress, Amazon, Walmart entre otros proveedores<br>con envios automaticos a todo el mundo</div>
 
         <!-- Acciones: 3 botones en una línea (iguales) -->
         <div class="form-actions">
@@ -239,7 +241,7 @@
 
           <a id="requestIdBtn" class="btn btn-blue" href="https://wa.me/595974141073?text=Hola%20Woz%2C%20solicito%20un%20ID%20de%20vendedor" target="_blank" rel="noopener">Solicitar ID de vendedor</a>
 
-          <button id="publicarBtn" type="submit" class="btn btn-green publicar-btn" disabled>Publicar en Woz Marketplace</button>
+          <button id="publicarBtn" type="submit" class="btn btn-green publicar-btn" disabled>Comenza a vender en automatico</button>
         </div>
       </form>
     </div>
@@ -248,4 +250,5 @@
   <script src="js/tutorial.js" defer></script>
 </body>
 </html>
+
 
