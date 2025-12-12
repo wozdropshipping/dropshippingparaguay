@@ -242,48 +242,57 @@ main{
   background:var(--card-bg);
   border-radius:var(--radius);
   padding:14px;
-  display:grid;
-  grid-template-columns:88px 1fr;
+  display:flex;
+  flex-direction:column;
   gap:12px;
-  align-items:center;
   box-shadow:0 6px 16px rgba(10,20,30,0.05);
   transition:transform 0.2s;
 }
-.product-card:hover{transform:translateY(-3px)}
-.product-card .prices {
-  display: flex;
-  flex-direction: column;
-  gap: 2px; /* Reduce el espacio vertical */
-  margin-bottom: 0.5em;
+
+.product-card .info{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
 }
-.product-card .provider-price,
-.product-card .suggested-price {
-  margin: 0;
-  padding: 0;
+
+/* Botón "Ver el producto" centrado y con verde más oscuro */
+.ver-btn {
+  display: block;           /* ocupa línea completa */
+  width: 100%;              /* ancho total de la card */
+  min-width: 0;             /* evita límites mínimos */
+  align-self: stretch;      /* se estira dentro del contenedor flex */
+  margin: 8px 0 0 0;        /* sin espacios laterales */
+  height: var(--btn-height);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  background: #27ae60;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.25);
+  transition: all 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  align-self: center;
+  margin-top: 8px;
 }
-.thumb{
-  width:88px;height:88px;border-radius:12px;background:#fff;
-  display:flex;align-items:center;justify-content:center;overflow:hidden;
-  border:1px solid rgba(0,0,0,0.05);
+
+.ver-btn:hover {
+  background: #229954;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(39, 174, 96, 0.3);
 }
-.thumb img{width:100%;height:100%;object-fit:cover}
-.info{display:flex;flex-direction:column;gap:6px}
-.title{font-size:16px;font-weight:700;color:var(--navy);line-height:1.2}
-.provider{
-  font-size:13px;color:var(--muted);
-  display:flex;align-items:center;gap:6px;
-}
-.provider-flag{
-  width:20px;height:14px;object-fit:cover;
-  border-radius:2px;border:1px solid rgba(0,0,0,0.1);
-}
-.verified{
-  background:#fff6e6;
-  color:var(--yellow);
-  padding:2px 6px;
-  border-radius:999px;
-  font-weight:700;
-  font-size:12px;
+
+.ver-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
 }
 
 /* Rating */
@@ -305,7 +314,7 @@ main{
 .droppers .user-icon{width:16px;height:16px;fill:currentColor}
 
 /* Precios */
-.prices{display:flex;gap:16px;flex-wrap:wrap;margin-top:4px}
+.prices{display:flex;gap:5px;flex-wrap:wrap;margin-top:4px}
 .provider-price,.suggested-price{font-size:14px;color:var(--muted)}
 .price-suggested{color:var(--accent);font-weight:700}
 
@@ -503,22 +512,65 @@ main{
 .btn-green { background:#19b44c; color:#fff; }
 .btn-green:hover { background:#14913d; transform: translateY(-1px); }
 
-/* Botón "Vender este producto" (si existe en listados) */
-.vender-btn,
-button.vender-btn,
-a.vender-btn {
+/* Botón "Ver el producto" en las tarjetas de producto */
+.ver-btn {
+  display: block;           /* ocupa línea completa */
+  width: 100%;              /* ancho total de la card */
+  min-width: 0;             /* evita límites mínimos */
+  align-self: stretch;      /* se estira dentro del contenedor flex */
+  margin: 8px 0 0 0;        /* sin espacios laterales */
   height: var(--btn-height);
   border-radius: 12px;
-  padding: 8px 12px;
+  padding: 12px 16px;
   font-weight: 600;
-  background: #32cd32;
+  font-size: 14px;
+  background: #27ae60;
   color: #ffffff;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 6px 18px rgba(7,18,28,0.04);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.25);
+  transition: all 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  align-self: center;
+  margin-top: 8px;
 }
 
-/* Deshabilitado visual del publicar */
-.publicar-btn[disabled] { opacity: 0.65; cursor: not-allowed; pointer-events: none; }
+.ver-btn:hover {
+  background: #229954;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(39, 174, 96, 0.3);
+}
+
+.ver-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
+}
+
+/* Ajuste del layout de la tarjeta para acomodar mejor el botón */
+.product-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 6px 16px rgba(10,20,30,0.05);
+  transition: transform 0.2s;
+}
+
+.product-card .info {
+  flex: 1;
+}
+
+.ver-btn {
+  align-self: flex-end;
+  margin-top: 8px;
+}
 
 /* --- Espacios entre títulos y campos (fáciles de ajustar) --- */
 /* Busca en tu archivo las reglas .modal-title, .modal-form y .form-group
@@ -577,4 +629,56 @@ a.vender-btn {
   .form-actions .btn {
     width: 100%;
   }
+}
+
+/* Ocultar tutorial y sus elementos */
+#tutorial-banner,
+#tutorial-banner .tutorial-banner-inner,
+#tutorial-banner .tutorial-start,
+#tutorial-intro {
+  display: none !important;
+}
+
+/* Ocultar botón flotante del tutorial */
+#tutorial-restart {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Botón flotante Read me */
+.readme-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10001;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #0f3b48;
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  font-weight: 700;
+  cursor: pointer;
+}
+.readme-fab:hover { background: #0c313c; transform: translateY(-1px); }
+
+/* Modal Read me reutiliza estilos de .modal/.modal-content */
+.readme-modal .modal-content {
+  width: min(720px, 96vw);
+  max-width: 720px;
+}
+.readme-content h3 { margin: 0 0 12px; }
+.readme-content h4 { margin: 16px 0 8px; color: #1a5f8a; }
+.readme-content p, .readme-content li { color: #333; }
+.readme-content ul { padding-left: 18px; }
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
 }
